@@ -56,4 +56,4 @@ def PacketHandler(pkt):
 				print pkt[IP].dst
 				sendp(pkt,iface='br-f1fa2871cb70')
 			
-sniff(prn=PacketHandler)	     #use scapy to sniff the localhost interface "lo" and perform the Packethandler function on the incoming packet
+sniff(iface='lo',prn=PacketHandler)	     #use scapy to sniff the localhost interface "lo" and perform the Packethandler function on the incoming packet
